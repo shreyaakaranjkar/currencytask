@@ -30,11 +30,11 @@ export class PostService{
     // }
 
     gteexchangerates(basecurrency:string):Observable<any>{
-        let posturl = `${this.postkey}/${this.apikey}/latest/USD`;
+        let posturl = `${this.postkey}/${this.apikey}/latest/${basecurrency}`;
         return this.http.get(posturl)
     }
     getAllCodes(){
-        let posturl = `${this.postkey}/${this.apikey}/latest/USD`;
+        let posturl = `${this.postkey}/${this.apikey}/latest/AED`;
         return this.http.get(posturl)
         .pipe(
             map((res :any)=>{

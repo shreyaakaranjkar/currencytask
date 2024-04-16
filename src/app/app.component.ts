@@ -30,8 +30,7 @@ export class AppComponent implements OnInit{
     this.postService.gteexchangerates(this.basecurrency)
     .subscribe(res => {console.log(res)
     this.result = res.conversion_rates [this.targetCurrency] * this.amount
-      console.log(this.result);
-      
+      console.log(this.result);  
   }
     )
   }
